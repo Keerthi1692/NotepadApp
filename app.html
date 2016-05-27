@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sticky notes app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="custom.js"></script>
+    <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body class="w3-blue" ng-app="myNoteApp" ng-controller="myAppCtrl">
+<div class="w3-container">
+    <div class="w3-row">
+        <div class="w3-col s6 w3-margin-left">
+            <h1 class="w3-center">Sticky notes Angular app</h1>
+            <textarea class="w3-text-black" ng-model="message" rows="20" ng-change="maxLimit()" ng-disabled="block" style="width: 100%;"></textarea>
+            <p class="w3-center">You have {{letters}} letters more to write</p>
+            <p align="center">
+                <button class="w3-btn" ng-click="save()">Save</button>
+                <button class="w3-btn" ng-click="clear()">Clear</button>
+            </p>
+        </div>
+        <div class="w3-col s3" id="info">
+            <h3>Hi there, welcome to our app!!</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+</div>
+<script src="myNoteApp.js"></script>
+<script src="myNoteCtrl.js"></script>
+
+
+</body>
+</html>

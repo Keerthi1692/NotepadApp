@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login: Sticky notes app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="custom.js"></script>
+    <script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="node_modules/sweetalert/dist/sweetalert.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+
+
+<body class="w3-blue" ng-app="myNoteApp" ng-controller="myNoteCtrl">
+<div class="w3-container">
+    <div class="w3-row" id="app">
+        <div class="w3-container">
+            <h2>Login Form</h2>
+        </div>
+        <div  class="w3-col s6 w3-card-4 w3-margin w3-padding w3-blue-grey">
+            <form class="w3-container" id="form"  ng-submit="validate()">
+                <label class="w3-label w3-text-white" ng-modal="user"><b>User name</b></label>
+                <input id="userName" class="w3-input w3-border w3-light-grey" type="text">
+
+                <label class="w3-label w3-text-white"><b>Password</b></label>
+                <input id="password" class="w3-input w3-border w3-light-grey" type="password">
+                <input type="submit" class="w3-btn w3-light-grey w3-padding w3-margin" id="submitBtn" value="Login" ng-disabled="disableValue">
+            </form>
+        </div>
+
+    </div>
+</div>
+<script src="custom.js"></script>
+<script src="myNoteApp.js"></script>
+<script src="myNoteCtrl.js"></script>
+
+
+</body>
+</html>
